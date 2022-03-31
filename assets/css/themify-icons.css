@@ -1,0 +1,1083 @@
+@font-face {
+	font-family 'themify';
+	srcurl('..fontsthemify.eot-fvbane');
+
+
+	srcurl('..fontsthemify.eot#iefix-fvbane') format('embedded-opentype'),
+		url('..fontsthemify.woff-fvbane') format('woff'),
+		url('..fontsthemify.ttf-fvbane') format('truetype'),
+		url('..fontsthemify.svg-fvbane#themify') format('svg');
+	font-weight normal;
+	font-style normal;
+}
+
+[class^=ti-], [class= ti-] {
+	font-family 'themify';
+	speak none;
+	font-style normal;
+	font-weight normal;
+	font-variant normal;
+	text-transform none;
+	line-height 1;
+
+	 Better Font Rendering =========== 
+	-webkit-font-smoothing antialiased;
+	-moz-osx-font-smoothing grayscale;
+}
+
+.ti-wandbefore {
+	content e600;
+}
+.ti-volumebefore {
+	content e601;
+}
+.ti-userbefore {
+	content e602;
+}
+.ti-unlockbefore {
+	content e603;
+}
+.ti-unlinkbefore {
+	content e604;
+}
+.ti-trashbefore {
+	content e605;
+}
+.ti-thoughtbefore {
+	content e606;
+}
+.ti-targetbefore {
+	content e607;
+}
+.ti-tagbefore {
+	content e608;
+}
+.ti-tabletbefore {
+	content e609;
+}
+.ti-starbefore {
+	content e60a;
+}
+.ti-spraybefore {
+	content e60b;
+}
+.ti-signalbefore {
+	content e60c;
+}
+.ti-shopping-cartbefore {
+	content e60d;
+}
+.ti-shopping-cart-fullbefore {
+	content e60e;
+}
+.ti-settingsbefore {
+	content e60f;
+}
+.ti-searchbefore {
+	content e610;
+}
+.ti-zoom-inbefore {
+	content e611;
+}
+.ti-zoom-outbefore {
+	content e612;
+}
+.ti-cutbefore {
+	content e613;
+}
+.ti-rulerbefore {
+	content e614;
+}
+.ti-ruler-pencilbefore {
+	content e615;
+}
+.ti-ruler-altbefore {
+	content e616;
+}
+.ti-bookmarkbefore {
+	content e617;
+}
+.ti-bookmark-altbefore {
+	content e618;
+}
+.ti-reloadbefore {
+	content e619;
+}
+.ti-plusbefore {
+	content e61a;
+}
+.ti-pinbefore {
+	content e61b;
+}
+.ti-pencilbefore {
+	content e61c;
+}
+.ti-pencil-altbefore {
+	content e61d;
+}
+.ti-paint-rollerbefore {
+	content e61e;
+}
+.ti-paint-bucketbefore {
+	content e61f;
+}
+.ti-nabefore {
+	content e620;
+}
+.ti-mobilebefore {
+	content e621;
+}
+.ti-minusbefore {
+	content e622;
+}
+.ti-medallbefore {
+	content e623;
+}
+.ti-medall-altbefore {
+	content e624;
+}
+.ti-markerbefore {
+	content e625;
+}
+.ti-marker-altbefore {
+	content e626;
+}
+.ti-arrow-upbefore {
+	content e627;
+}
+.ti-arrow-rightbefore {
+	content e628;
+}
+.ti-arrow-leftbefore {
+	content e629;
+}
+.ti-arrow-downbefore {
+	content e62a;
+}
+.ti-lockbefore {
+	content e62b;
+}
+.ti-location-arrowbefore {
+	content e62c;
+}
+.ti-linkbefore {
+	content e62d;
+}
+.ti-layoutbefore {
+	content e62e;
+}
+.ti-layersbefore {
+	content e62f;
+}
+.ti-layers-altbefore {
+	content e630;
+}
+.ti-keybefore {
+	content e631;
+}
+.ti-importbefore {
+	content e632;
+}
+.ti-imagebefore {
+	content e633;
+}
+.ti-heartbefore {
+	content e634;
+}
+.ti-heart-brokenbefore {
+	content e635;
+}
+.ti-hand-stopbefore {
+	content e636;
+}
+.ti-hand-openbefore {
+	content e637;
+}
+.ti-hand-dragbefore {
+	content e638;
+}
+.ti-folderbefore {
+	content e639;
+}
+.ti-flagbefore {
+	content e63a;
+}
+.ti-flag-altbefore {
+	content e63b;
+}
+.ti-flag-alt-2before {
+	content e63c;
+}
+.ti-eyebefore {
+	content e63d;
+}
+.ti-exportbefore {
+	content e63e;
+}
+.ti-exchange-verticalbefore {
+	content e63f;
+}
+.ti-desktopbefore {
+	content e640;
+}
+.ti-cupbefore {
+	content e641;
+}
+.ti-crownbefore {
+	content e642;
+}
+.ti-commentsbefore {
+	content e643;
+}
+.ti-commentbefore {
+	content e644;
+}
+.ti-comment-altbefore {
+	content e645;
+}
+.ti-closebefore {
+	content e646;
+}
+.ti-clipbefore {
+	content e647;
+}
+.ti-angle-upbefore {
+	content e648;
+}
+.ti-angle-rightbefore {
+	content e649;
+}
+.ti-angle-leftbefore {
+	content e64a;
+}
+.ti-angle-downbefore {
+	content e64b;
+}
+.ti-checkbefore {
+	content e64c;
+}
+.ti-check-boxbefore {
+	content e64d;
+}
+.ti-camerabefore {
+	content e64e;
+}
+.ti-announcementbefore {
+	content e64f;
+}
+.ti-brushbefore {
+	content e650;
+}
+.ti-briefcasebefore {
+	content e651;
+}
+.ti-boltbefore {
+	content e652;
+}
+.ti-bolt-altbefore {
+	content e653;
+}
+.ti-blackboardbefore {
+	content e654;
+}
+.ti-bagbefore {
+	content e655;
+}
+.ti-movebefore {
+	content e656;
+}
+.ti-arrows-verticalbefore {
+	content e657;
+}
+.ti-arrows-horizontalbefore {
+	content e658;
+}
+.ti-fullscreenbefore {
+	content e659;
+}
+.ti-arrow-top-rightbefore {
+	content e65a;
+}
+.ti-arrow-top-leftbefore {
+	content e65b;
+}
+.ti-arrow-circle-upbefore {
+	content e65c;
+}
+.ti-arrow-circle-rightbefore {
+	content e65d;
+}
+.ti-arrow-circle-leftbefore {
+	content e65e;
+}
+.ti-arrow-circle-downbefore {
+	content e65f;
+}
+.ti-angle-double-upbefore {
+	content e660;
+}
+.ti-angle-double-rightbefore {
+	content e661;
+}
+.ti-angle-double-leftbefore {
+	content e662;
+}
+.ti-angle-double-downbefore {
+	content e663;
+}
+.ti-zipbefore {
+	content e664;
+}
+.ti-worldbefore {
+	content e665;
+}
+.ti-wheelchairbefore {
+	content e666;
+}
+.ti-view-listbefore {
+	content e667;
+}
+.ti-view-list-altbefore {
+	content e668;
+}
+.ti-view-gridbefore {
+	content e669;
+}
+.ti-uppercasebefore {
+	content e66a;
+}
+.ti-uploadbefore {
+	content e66b;
+}
+.ti-underlinebefore {
+	content e66c;
+}
+.ti-truckbefore {
+	content e66d;
+}
+.ti-timerbefore {
+	content e66e;
+}
+.ti-ticketbefore {
+	content e66f;
+}
+.ti-thumb-upbefore {
+	content e670;
+}
+.ti-thumb-downbefore {
+	content e671;
+}
+.ti-textbefore {
+	content e672;
+}
+.ti-stats-upbefore {
+	content e673;
+}
+.ti-stats-downbefore {
+	content e674;
+}
+.ti-split-vbefore {
+	content e675;
+}
+.ti-split-hbefore {
+	content e676;
+}
+.ti-smallcapbefore {
+	content e677;
+}
+.ti-shinebefore {
+	content e678;
+}
+.ti-shift-rightbefore {
+	content e679;
+}
+.ti-shift-leftbefore {
+	content e67a;
+}
+.ti-shieldbefore {
+	content e67b;
+}
+.ti-notepadbefore {
+	content e67c;
+}
+.ti-serverbefore {
+	content e67d;
+}
+.ti-quote-rightbefore {
+	content e67e;
+}
+.ti-quote-leftbefore {
+	content e67f;
+}
+.ti-pulsebefore {
+	content e680;
+}
+.ti-printerbefore {
+	content e681;
+}
+.ti-power-offbefore {
+	content e682;
+}
+.ti-plugbefore {
+	content e683;
+}
+.ti-pie-chartbefore {
+	content e684;
+}
+.ti-paragraphbefore {
+	content e685;
+}
+.ti-panelbefore {
+	content e686;
+}
+.ti-packagebefore {
+	content e687;
+}
+.ti-musicbefore {
+	content e688;
+}
+.ti-music-altbefore {
+	content e689;
+}
+.ti-mousebefore {
+	content e68a;
+}
+.ti-mouse-altbefore {
+	content e68b;
+}
+.ti-moneybefore {
+	content e68c;
+}
+.ti-microphonebefore {
+	content e68d;
+}
+.ti-menubefore {
+	content e68e;
+}
+.ti-menu-altbefore {
+	content e68f;
+}
+.ti-mapbefore {
+	content e690;
+}
+.ti-map-altbefore {
+	content e691;
+}
+.ti-loopbefore {
+	content e692;
+}
+.ti-location-pinbefore {
+	content e693;
+}
+.ti-listbefore {
+	content e694;
+}
+.ti-light-bulbbefore {
+	content e695;
+}
+.ti-Italicbefore {
+	content e696;
+}
+.ti-infobefore {
+	content e697;
+}
+.ti-infinitebefore {
+	content e698;
+}
+.ti-id-badgebefore {
+	content e699;
+}
+.ti-hummerbefore {
+	content e69a;
+}
+.ti-homebefore {
+	content e69b;
+}
+.ti-helpbefore {
+	content e69c;
+}
+.ti-headphonebefore {
+	content e69d;
+}
+.ti-harddrivesbefore {
+	content e69e;
+}
+.ti-harddrivebefore {
+	content e69f;
+}
+.ti-giftbefore {
+	content e6a0;
+}
+.ti-gamebefore {
+	content e6a1;
+}
+.ti-filterbefore {
+	content e6a2;
+}
+.ti-filesbefore {
+	content e6a3;
+}
+.ti-filebefore {
+	content e6a4;
+}
+.ti-eraserbefore {
+	content e6a5;
+}
+.ti-envelopebefore {
+	content e6a6;
+}
+.ti-downloadbefore {
+	content e6a7;
+}
+.ti-directionbefore {
+	content e6a8;
+}
+.ti-direction-altbefore {
+	content e6a9;
+}
+.ti-dashboardbefore {
+	content e6aa;
+}
+.ti-control-stopbefore {
+	content e6ab;
+}
+.ti-control-shufflebefore {
+	content e6ac;
+}
+.ti-control-playbefore {
+	content e6ad;
+}
+.ti-control-pausebefore {
+	content e6ae;
+}
+.ti-control-forwardbefore {
+	content e6af;
+}
+.ti-control-backwardbefore {
+	content e6b0;
+}
+.ti-cloudbefore {
+	content e6b1;
+}
+.ti-cloud-upbefore {
+	content e6b2;
+}
+.ti-cloud-downbefore {
+	content e6b3;
+}
+.ti-clipboardbefore {
+	content e6b4;
+}
+.ti-carbefore {
+	content e6b5;
+}
+.ti-calendarbefore {
+	content e6b6;
+}
+.ti-bookbefore {
+	content e6b7;
+}
+.ti-bellbefore {
+	content e6b8;
+}
+.ti-basketballbefore {
+	content e6b9;
+}
+.ti-bar-chartbefore {
+	content e6ba;
+}
+.ti-bar-chart-altbefore {
+	content e6bb;
+}
+.ti-back-rightbefore {
+	content e6bc;
+}
+.ti-back-leftbefore {
+	content e6bd;
+}
+.ti-arrows-cornerbefore {
+	content e6be;
+}
+.ti-archivebefore {
+	content e6bf;
+}
+.ti-anchorbefore {
+	content e6c0;
+}
+.ti-align-rightbefore {
+	content e6c1;
+}
+.ti-align-leftbefore {
+	content e6c2;
+}
+.ti-align-justifybefore {
+	content e6c3;
+}
+.ti-align-centerbefore {
+	content e6c4;
+}
+.ti-alertbefore {
+	content e6c5;
+}
+.ti-alarm-clockbefore {
+	content e6c6;
+}
+.ti-agendabefore {
+	content e6c7;
+}
+.ti-writebefore {
+	content e6c8;
+}
+.ti-windowbefore {
+	content e6c9;
+}
+.ti-widgetizedbefore {
+	content e6ca;
+}
+.ti-widgetbefore {
+	content e6cb;
+}
+.ti-widget-altbefore {
+	content e6cc;
+}
+.ti-walletbefore {
+	content e6cd;
+}
+.ti-video-clapperbefore {
+	content e6ce;
+}
+.ti-video-camerabefore {
+	content e6cf;
+}
+.ti-vectorbefore {
+	content e6d0;
+}
+.ti-themify-logobefore {
+	content e6d1;
+}
+.ti-themify-faviconbefore {
+	content e6d2;
+}
+.ti-themify-favicon-altbefore {
+	content e6d3;
+}
+.ti-supportbefore {
+	content e6d4;
+}
+.ti-stampbefore {
+	content e6d5;
+}
+.ti-split-v-altbefore {
+	content e6d6;
+}
+.ti-slicebefore {
+	content e6d7;
+}
+.ti-shortcodebefore {
+	content e6d8;
+}
+.ti-shift-right-altbefore {
+	content e6d9;
+}
+.ti-shift-left-altbefore {
+	content e6da;
+}
+.ti-ruler-alt-2before {
+	content e6db;
+}
+.ti-receiptbefore {
+	content e6dc;
+}
+.ti-pin2before {
+	content e6dd;
+}
+.ti-pin-altbefore {
+	content e6de;
+}
+.ti-pencil-alt2before {
+	content e6df;
+}
+.ti-palettebefore {
+	content e6e0;
+}
+.ti-morebefore {
+	content e6e1;
+}
+.ti-more-altbefore {
+	content e6e2;
+}
+.ti-microphone-altbefore {
+	content e6e3;
+}
+.ti-magnetbefore {
+	content e6e4;
+}
+.ti-line-doublebefore {
+	content e6e5;
+}
+.ti-line-dottedbefore {
+	content e6e6;
+}
+.ti-line-dashedbefore {
+	content e6e7;
+}
+.ti-layout-width-fullbefore {
+	content e6e8;
+}
+.ti-layout-width-defaultbefore {
+	content e6e9;
+}
+.ti-layout-width-default-altbefore {
+	content e6ea;
+}
+.ti-layout-tabbefore {
+	content e6eb;
+}
+.ti-layout-tab-windowbefore {
+	content e6ec;
+}
+.ti-layout-tab-vbefore {
+	content e6ed;
+}
+.ti-layout-tab-minbefore {
+	content e6ee;
+}
+.ti-layout-sliderbefore {
+	content e6ef;
+}
+.ti-layout-slider-altbefore {
+	content e6f0;
+}
+.ti-layout-sidebar-rightbefore {
+	content e6f1;
+}
+.ti-layout-sidebar-nonebefore {
+	content e6f2;
+}
+.ti-layout-sidebar-leftbefore {
+	content e6f3;
+}
+.ti-layout-placeholderbefore {
+	content e6f4;
+}
+.ti-layout-menubefore {
+	content e6f5;
+}
+.ti-layout-menu-vbefore {
+	content e6f6;
+}
+.ti-layout-menu-separatedbefore {
+	content e6f7;
+}
+.ti-layout-menu-fullbefore {
+	content e6f8;
+}
+.ti-layout-media-right-altbefore {
+	content e6f9;
+}
+.ti-layout-media-rightbefore {
+	content e6fa;
+}
+.ti-layout-media-overlaybefore {
+	content e6fb;
+}
+.ti-layout-media-overlay-altbefore {
+	content e6fc;
+}
+.ti-layout-media-overlay-alt-2before {
+	content e6fd;
+}
+.ti-layout-media-left-altbefore {
+	content e6fe;
+}
+.ti-layout-media-leftbefore {
+	content e6ff;
+}
+.ti-layout-media-center-altbefore {
+	content e700;
+}
+.ti-layout-media-centerbefore {
+	content e701;
+}
+.ti-layout-list-thumbbefore {
+	content e702;
+}
+.ti-layout-list-thumb-altbefore {
+	content e703;
+}
+.ti-layout-list-postbefore {
+	content e704;
+}
+.ti-layout-list-large-imagebefore {
+	content e705;
+}
+.ti-layout-line-solidbefore {
+	content e706;
+}
+.ti-layout-grid4before {
+	content e707;
+}
+.ti-layout-grid3before {
+	content e708;
+}
+.ti-layout-grid2before {
+	content e709;
+}
+.ti-layout-grid2-thumbbefore {
+	content e70a;
+}
+.ti-layout-cta-rightbefore {
+	content e70b;
+}
+.ti-layout-cta-leftbefore {
+	content e70c;
+}
+.ti-layout-cta-centerbefore {
+	content e70d;
+}
+.ti-layout-cta-btn-rightbefore {
+	content e70e;
+}
+.ti-layout-cta-btn-leftbefore {
+	content e70f;
+}
+.ti-layout-column4before {
+	content e710;
+}
+.ti-layout-column3before {
+	content e711;
+}
+.ti-layout-column2before {
+	content e712;
+}
+.ti-layout-accordion-separatedbefore {
+	content e713;
+}
+.ti-layout-accordion-mergedbefore {
+	content e714;
+}
+.ti-layout-accordion-listbefore {
+	content e715;
+}
+.ti-ink-penbefore {
+	content e716;
+}
+.ti-info-altbefore {
+	content e717;
+}
+.ti-help-altbefore {
+	content e718;
+}
+.ti-headphone-altbefore {
+	content e719;
+}
+.ti-hand-point-upbefore {
+	content e71a;
+}
+.ti-hand-point-rightbefore {
+	content e71b;
+}
+.ti-hand-point-leftbefore {
+	content e71c;
+}
+.ti-hand-point-downbefore {
+	content e71d;
+}
+.ti-gallerybefore {
+	content e71e;
+}
+.ti-face-smilebefore {
+	content e71f;
+}
+.ti-face-sadbefore {
+	content e720;
+}
+.ti-credit-cardbefore {
+	content e721;
+}
+.ti-control-skip-forwardbefore {
+	content e722;
+}
+.ti-control-skip-backwardbefore {
+	content e723;
+}
+.ti-control-recordbefore {
+	content e724;
+}
+.ti-control-ejectbefore {
+	content e725;
+}
+.ti-comments-smileybefore {
+	content e726;
+}
+.ti-brush-altbefore {
+	content e727;
+}
+.ti-youtubebefore {
+	content e728;
+}
+.ti-vimeobefore {
+	content e729;
+}
+.ti-twitterbefore {
+	content e72a;
+}
+.ti-timebefore {
+	content e72b;
+}
+.ti-tumblrbefore {
+	content e72c;
+}
+.ti-skypebefore {
+	content e72d;
+}
+.ti-sharebefore {
+	content e72e;
+}
+.ti-share-altbefore {
+	content e72f;
+}
+.ti-rocketbefore {
+	content e730;
+}
+.ti-pinterestbefore {
+	content e731;
+}
+.ti-new-windowbefore {
+	content e732;
+}
+.ti-microsoftbefore {
+	content e733;
+}
+.ti-list-olbefore {
+	content e734;
+}
+.ti-linkedinbefore {
+	content e735;
+}
+.ti-layout-sidebar-2before {
+	content e736;
+}
+.ti-layout-grid4-altbefore {
+	content e737;
+}
+.ti-layout-grid3-altbefore {
+	content e738;
+}
+.ti-layout-grid2-altbefore {
+	content e739;
+}
+.ti-layout-column4-altbefore {
+	content e73a;
+}
+.ti-layout-column3-altbefore {
+	content e73b;
+}
+.ti-layout-column2-altbefore {
+	content e73c;
+}
+.ti-instagrambefore {
+	content e73d;
+}
+.ti-googlebefore {
+	content e73e;
+}
+.ti-githubbefore {
+	content e73f;
+}
+.ti-flickrbefore {
+	content e740;
+}
+.ti-facebookbefore {
+	content e741;
+}
+.ti-dropboxbefore {
+	content e742;
+}
+.ti-dribbblebefore {
+	content e743;
+}
+.ti-applebefore {
+	content e744;
+}
+.ti-androidbefore {
+	content e745;
+}
+.ti-savebefore {
+	content e746;
+}
+.ti-save-altbefore {
+	content e747;
+}
+.ti-yahoobefore {
+	content e748;
+}
+.ti-wordpressbefore {
+	content e749;
+}
+.ti-vimeo-altbefore {
+	content e74a;
+}
+.ti-twitter-altbefore {
+	content e74b;
+}
+.ti-tumblr-altbefore {
+	content e74c;
+}
+.ti-trellobefore {
+	content e74d;
+}
+.ti-stack-overflowbefore {
+	content e74e;
+}
+.ti-soundcloudbefore {
+	content e74f;
+}
+.ti-sharethisbefore {
+	content e750;
+}
+.ti-sharethis-altbefore {
+	content e751;
+}
+.ti-redditbefore {
+	content e752;
+}
+.ti-pinterest-altbefore {
+	content e753;
+}
+.ti-microsoft-altbefore {
+	content e754;
+}
+.ti-linuxbefore {
+	content e755;
+}
+.ti-jsfiddlebefore {
+	content e756;
+}
+.ti-joomlabefore {
+	content e757;
+}
+.ti-html5before {
+	content e758;
+}
+.ti-flickr-altbefore {
+	content e759;
+}
+.ti-emailbefore {
+	content e75a;
+}
+.ti-drupalbefore {
+	content e75b;
+}
+.ti-dropbox-altbefore {
+	content e75c;
+}
+.ti-css3before {
+	content e75d;
+}
+.ti-rssbefore {
+	content e75e;
+}
+.ti-rss-altbefore {
+	content e75f;
+}
