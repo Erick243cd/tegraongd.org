@@ -34,11 +34,11 @@ class Pages extends CI_Controller
 		$sess_data = $this->session->userdata('logged_in');
 		if (!empty($sess_data)) {
 
-			$data['categories'] = $this->activity_model->get_categories();
+			$data = ['session_data' => $sess_data];
 
-			$this->load->view('templates/header');
-			$this->load->view('dashboard/main', $data);
-			$this->load->view('templates/footer');
+			$this->load->view('dashboard/layouts/header', $data);
+			$this->load->view('dashboard/main');
+			$this->load->view('dashboard/layouts/footer');
 
 		} else {
 			redirect(base_url('login'));
