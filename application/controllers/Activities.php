@@ -85,13 +85,27 @@ class Activities extends CI_Controller
 	/* Activités récentes*/
 	function liste()
 	{
-		$data['title'] = 'activités récentes';
+		$sess_data = $this->session->userdata('logged_in');
+		if (!empty($sess_data)) {
 
-		$data['posts'] = $this->activity_model->get_posts();
+			$sess_data = [
+				'title' => 'Activités',
+				'subtitle' => 'Liste d\'activités',
+				'session_data' => $sess_data
+			];
 
-		$this->load->view('templates/header');
-		$this->load->view('dashboard/activities/index', $data);
-		$this->load->view('templates/footer');
+			$data = [
+				'posts' => $this->activity_model->get_posts(),
+				'session_data' => $sess_data
+			];
+
+			$this->load->view('dashboard/layouts/header', $sess_data);
+			$this->load->view('dashboard/activities/index', $data);
+			$this->load->view('dashboard/layouts/footer');
+
+		} else {
+			redirect('/login');
+		}
 	}
 
 	/*Editer les articles*/
