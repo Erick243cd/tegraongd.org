@@ -17,6 +17,10 @@
 <!--bootstrap -->
 <?= link_tag('assets/dashboard/plugins/bootstrap/css/bootstrap.min.css') ?>
 <?= link_tag('assets/dashboard/plugins/summernote/summernote.css') ?>
+
+<!-- data tables -->
+<?= link_tag('assets/dashboard/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css') ?>
+
 <!-- Material Design Lite CSS -->
 <?= link_tag('assets/dashboard/plugins/material/material.min.css') ?>
 <?= link_tag('assets/dashboard/css/material_style.css') ?>
@@ -43,7 +47,7 @@
 		<div class="page-header-inner ">
 			<!-- logo start -->
 			<div class="page-logo">
-				<a href="index.html">
+				<a href="<?= site_url()?>">
 					<span class="logo-icon material-icons fa-rotate-45">tegra</span>
 					<span class="logo-default"></span> </a>
 			</div>
@@ -106,4 +110,68 @@
 		</div>
 	</div>
 	<!-- end header -->
+
+	<!-- start page container -->
+<div class="page-container">
+	<!-- start sidebar menu -->
+	<div class="sidebar-container">
+		<div class="sidemenu-container navbar-collapse collapse fixed-menu">
+			<div id="remove-scroll" class="left-sidemenu">
+				<ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false"
+					data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+					<li class="sidebar-toggler-wrapper hide">
+						<div class="sidebar-toggler">
+							<span></span>
+						</div>
+					</li>
+					<li class="sidebar-user-panel">
+						<div class="user-panel">
+							<div class="pull-left image">
+
+							<?= img('assets/img/users/'.$session_data['user_image'], '', 'class="img-circle"')?>	
+							</div>
+							<div class="pull-left info">
+								<p> <?= ucfirst($session_data['user_name']) ?? "User name" ?></p>
+								<a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline">
+												Online</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item start active open">
+						<a href="#" class="nav-link nav-toggle">
+							<i class="material-icons">dashboard</i>
+							<span class="title">Dashboard</span>
+							<span class="selected"></span>
+							<span class="arrow open"></span>
+						</a>
+						<ul class="sub-menu">
+							<li class="nav-item active">
+								<a href="<?= site_url('activities/liste')?>" class="nav-link ">
+									<span class="title">Activités</span>
+									<span class="selected"></span>
+								</a>
+							</li>
+							<li class="nav-item ">
+								<a href="<?= site_url('videos/index')?>" class="nav-link ">
+									<span class="title">Vidéos</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="<?= site_url('categories/index')?>" class="nav-link ">
+									<span class="title">Catégories</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="<?= site_url('pages/logout')?>" class="nav-link nav-toggle"> <i class="fa fa-lock"></i>
+							<span class="title">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end sidebar menu -->
 

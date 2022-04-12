@@ -19,6 +19,12 @@
 <script src="<?= base_url()?>assets/dashboard/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <script src="<?= base_url()?>assets/dashboard/plugins/sparkline/jquery.sparkline.js"></script>
 <script src="<?= base_url()?>assets/dashboard/js/pages/sparkline/sparkline-data.js"></script>
+
+<!-- data tables -->
+<script src="<?= base_url()?>assets/dashboard/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url()?>assets/dashboard/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url()?>assets/dashboard/js/pages/table/table_data.js"></script>
+
 <!-- Common js-->
 <script src="<?= base_url()?>assets/dashboard/js/app.js"></script>
 <script src="<?= base_url()?>assets/dashboard/js/layout.js"></script>
