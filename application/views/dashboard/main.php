@@ -133,59 +133,7 @@
 			</div>
 			<!-- Chart end -->
 			
-			<div class="row">
-				<!-- Quick Mail start -->
-				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="inbox">
-						<div class="card">
-							<div class="card-body no-padding height-9">
-								<div class="inbox-body">
-									<div class="mail-list">
-										<div class="compose-mail">
-											<form method="post">
-												<div class="email-form">
-													<label for="to" class="">To:</label> <input type="text"
-																								tabindex="1" id="to" class="form-control itemField">
-													<div class="compose-options">
-														<a onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();"
-														   href="javascript:;">Cc</a> <a
-															onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();"
-															href="javascript:;">Bcc</a>
-													</div>
-												</div>
-												<div class="email-form hidden">
-													<label for="cc" class="">Cc:</label> <input type="text"
-																								tabindex="2" id="cc" class="form-control itemField">
-												</div>
-												<div class="email-form hidden">
-													<label for="bcc" class="">Bcc:</label> <input type="text"
-																								  tabindex="2" id="bcc" class="form-control itemField">
-												</div>
-												<div class="email-form">
-													<label for="subject" class="">Subject:</label> <input
-														type="text" tabindex="1" id="subject"
-														class="form-control itemField">
-												</div>
-												<div class="mt-4">
-													<div id="summernote"></div>
-													<input type="file" class="default" multiple>
-												</div>
-												<div class="box-footer clearfix">
-													<button type="button"
-															class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary pull-right">
-														Send <i class="fa fa-paper-plane-o"></i>
-													</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Quick Mail end -->
-			</div>
+			
 			
 			<!-- start new student list -->
 			
