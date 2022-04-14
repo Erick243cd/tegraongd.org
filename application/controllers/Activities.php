@@ -49,37 +49,78 @@ class Activities extends CI_Controller
 		$this->load->view('activities/view', $data);
 		$this->load->view('templates/footer');
 	}
-	//Fonction de création d'une nouvelle publication posts
+
 	public function create()
 	{
-		$data['title'] = 'Nouvelle activité';
+		$sess_data = $this->session->userdata('logged_in');
+		if (!empty($sess_data)) {
 
-		$data['categories'] = $this->activity_model->get_categories();
+			$header_data  = [
+				'title' => 'Activités',
+				'subtitle' => 'Nouvelle activité',
+				'session_data' => $sess_data
+			];
+
+			$data = [
+				'categories' => $this->activity_model->get_categories(),
+				'session_data' => $header_data,
+				'validation' => null
+			];
 
 
-		if (isset($_FILES["post_image"]["name"])) {
+			$this->form_validation->set_rules('post_title', 'Titre', 'required');
+			$this->form_validation->set_rules(
+				'post_description',
+				'Contenu',
+				'required'
+			);
 
-			$config['upload_path'] = './assets/img/blog/';
-			$config['allowed_types'] = 'jpg|png|webp';
+			$this->form_validation->set_rules('category', 'Catégorie', 'required');
 
-			$this->load->library('upload', $config);
-			if (!$this->upload->do_upload('post_image')) {
-				$file = 'no_file';
+			if ($this->form_validation->run() == FALSE) {
+
+				$this->load->view('dashboard/layouts/header', $header_data);
+				$this->load->view('dashboard/activities/create', $data);
+				$this->load->view('dashboard/layouts/footer');
 			} else {
-				$string = $_FILES["post_image"]["name"];
-				$pattern = '# #';
-				$replacement = "_";
-				$data = $this->upload->data();
-				$file = preg_replace($pattern, $replacement, $string);
+
+				if (isset($_FILES["post_image"]["name"])) {
+
+					$config['upload_path'] = './assets/img/blog/';
+					$config['allowed_types'] = 'jpg|png|webp|jpeg';
+
+					$this->load->library('upload', $config);
+					if (!$this->upload->do_upload('post_image')) {
+						$file = 'no_file';
+					} else {
+						$string = $_FILES["post_image"]["name"];
+						$pattern = '# #';
+						$replacement = "_";
+						$data = $this->upload->data();
+						$file = preg_replace($pattern, $replacement, $string);
+					}
+
+					$postData = array(
+
+						'title' => htmlentities($this->input->post('post_title')),
+						'slug' => url_title(str_to_noaccent($this->input->post('post_title'))),
+						'body' => $this->input->post('post_description'),
+						'id_category' => $this->input->post('category'),
+						'post_image' => $file
+					);
+
+
+					$this->activity_model->create_activity($postData);
+					//Set_messages
+					$this->session->set_flashdata('success', 'Votre publication a été créée avec succès !');
+					redirect('activities/liste');
+				}
 			}
+		} else {
+			redirect('/login');
 		}
-
-		$this->activity_model->create_activity($file);
-
-		//Set_messages
-		$this->session->set_flashdata('post_created', 'Votre publication a été créée avec succès !');
-		redirect('activities/liste');
 	}
+
 
 
 	/* Activités récentes*/
@@ -102,7 +143,6 @@ class Activities extends CI_Controller
 			$this->load->view('dashboard/layouts/header', $sess_data);
 			$this->load->view('dashboard/activities/index', $data);
 			$this->load->view('dashboard/layouts/footer');
-
 		} else {
 			redirect('/login');
 		}
@@ -112,20 +152,48 @@ class Activities extends CI_Controller
 
 	function edit($slug)
 	{
-		$data['activity'] = $this->activity_model->get_posts($slug);
-		$data['title'] = $data['activity']['title'];
-		$data['categories'] = $this->activity_model->get_categories();
 
-		$this->load->view('templates/header');
-		$this->load->view('dashboard/activities/edit', $data);
-		$this->load->view('templates/footer');
+		$sess_data = $this->session->userdata('logged_in');
+		if (!empty($sess_data)) {
+			$data['activity'] = $this->activity_model->get_posts($slug);
+
+			if (!empty($data['activity'])) {
+
+				$header_data  = [
+					'title' => 'Activités',
+					'subtitle' => 'Nouvelle activité',
+					'session_data' => $sess_data
+				];
+
+				$data = [
+					'categories' => $this->activity_model->get_categories(),
+					'session_data' => $header_data,
+					'activity' => $data['activity']
+				];
+
+				$this->load->view('dashboard/layouts/header', $header_data);
+				$this->load->view('dashboard/activities/edit', $data);
+				$this->load->view('dashboard/layouts/footer');
+
+			} else return false;
+		} else {
+			redirect('/login');
+		}
 	}
 
-	function update()
+	function update($slug)
 	{
-		$this->activity_model->update_activity();
+		$data = array(
+			'title' => htmlentities($this->input->post('post_title')),
+			'slug' => url_title(str_to_noaccent($this->input->post('post_title'))),
+			'body' => $this->input->post('post_description'),
+			'updated_at'=> date('Y-m-d'),
+			'id_category' => $this->input->post('category')
+		);
+
+		$this->activity_model->update_activity($data, $slug);
 		//Set_messages
-		$this->session->set_flashdata('post_created', 'Votre article a été modifié avec succès !');
+		$this->session->set_flashdata('success', 'Votre article a été modifié avec succès !');
 		redirect('activities/liste');
 	}
 
@@ -133,7 +201,7 @@ class Activities extends CI_Controller
 	{
 		$this->activity_model->delete_activity($id);
 		//Set_messages
-		$this->session->set_flashdata('post_created', 'Votre article a été suprimé avec succès !');
+		$this->session->set_flashdata('success', 'Votre article a été suprimé avec succès !');
 		redirect('activities/liste');
 	}
 }
