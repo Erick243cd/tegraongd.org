@@ -7,7 +7,7 @@
 					<div class="page-title"><?= $title ?></div>
 				</div>
 				<ol class="breadcrumb page-breadcrumb pull-right">
-					<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="<?= site_url('pages/dashboard')?>">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+					<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="<?= site_url('pages/dashboard') ?>">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 					</li>
 					<li><a class="parent-item" href="#"><?= $title ?></a>&nbsp;<i class="fa fa-angle-right"></i>
 					</li>
@@ -15,12 +15,17 @@
 				</ol>
 			</div>
 		</div>
-
+		
+		
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-head">
 						<header><?= $subtitle ?></header>
+						<?php if ($this->session->flashdata('success')) : ?>
+							<p class="text-success text-center"><?= $this->session->flashdata('success'); ?></p>
+						<?php endif ?>
+						
 
 						<div class="tools">
 							<a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
@@ -28,13 +33,14 @@
 							<a class="t-close btn-color fa fa-times" href="javascript:;"></a>
 						</div>
 					</div>
+					
 					<div class="card-body ">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-6">
 								<div class="btn-group">
-									<button id="addRow1" class="btn btn-info">
-										Add New <i class="fa fa-plus"></i>
-									</button>
+									<a href="<?= site_url('activities/create') ?>" id="addRow1" class="btn btn-info">
+										Ajouter <i class="fa fa-plus text-white"></i>
+									</a>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-6">
