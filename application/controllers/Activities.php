@@ -29,17 +29,11 @@ class Activities extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-
-
 	public function view($slug = null)
 	{
 
 		$data['activity'] = $this->activity_model->get_posts($slug);
 
-		//-----Pour le commentaire----//
-		//$post_id = $data['post']['id'];
-		//$data['comments']=$this->comment_model->get_comments($post_id);
-		//-----Fin Pour le commentaire----//
 		if (empty($data['activity'])) {
 			show_404();
 		}
@@ -124,7 +118,7 @@ class Activities extends CI_Controller
 
 
 	/* Activités récentes*/
-	function liste()
+	public function liste()
 	{
 		$sess_data = $this->session->userdata('logged_in');
 		if (!empty($sess_data)) {
@@ -150,7 +144,7 @@ class Activities extends CI_Controller
 
 	/*Editer les articles*/
 
-	function edit($slug)
+	public function edit($slug)
 	{
 
 		$sess_data = $this->session->userdata('logged_in');
@@ -174,20 +168,19 @@ class Activities extends CI_Controller
 				$this->load->view('dashboard/layouts/header', $header_data);
 				$this->load->view('dashboard/activities/edit', $data);
 				$this->load->view('dashboard/layouts/footer');
-
 			} else return false;
 		} else {
 			redirect('/login');
 		}
 	}
 
-	function update($slug)
+	public function update($slug)
 	{
 		$data = array(
 			'title' => htmlentities($this->input->post('post_title')),
 			'slug' => url_title(str_to_noaccent($this->input->post('post_title'))),
 			'body' => $this->input->post('post_description'),
-			'updated_at'=> date('Y-m-d'),
+			'updated_at' => date('Y-m-d'),
 			'id_category' => $this->input->post('category')
 		);
 
@@ -197,7 +190,7 @@ class Activities extends CI_Controller
 		redirect('activities/liste');
 	}
 
-	function delete($id)
+	public function delete($id)
 	{
 		$this->activity_model->delete_activity($id);
 		//Set_messages
