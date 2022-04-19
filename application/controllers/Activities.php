@@ -6,7 +6,7 @@
 class Activities extends CI_Controller
 {
 
-	public function index($offset = 0)
+	public function index($offset = 0, $categoryID = null)
 	{
 		//Pagination Config
 		$config['base_url'] = base_url() . 'activities/index/';
@@ -17,13 +17,15 @@ class Activities extends CI_Controller
 
 		//Init Pagination
 		$this->pagination->initialize($config);
-		$data['title'] = 'Activités récentes';
+
 		$slug = false;
-		$data['activities'] = $this->activity_model->get_posts($slug, $config['per_page'], $offset);
 
-		$limit = 3;
-		$data['latest'] = $this->activity_model->get_posts($slug, $limit, $offset);
-
+		$data = [
+			'title' => 'Activités récentes',
+			'activities' => $this->activity_model->get_posts($slug, $config['per_page'], $offset, $categoryID),
+			'categories' => $this->activity_model->get_categories(),
+			'latest' => $this->activity_model->get_posts($slug, 3, $offset),
+		];
 		$this->load->view('templates/header');
 		$this->load->view('activities/index', $data);
 		$this->load->view('templates/footer');
@@ -31,17 +33,21 @@ class Activities extends CI_Controller
 
 	public function view($slug = null)
 	{
+		$dt['activity'] = $this->activity_model->get_posts($slug);
 
-		$data['activity'] = $this->activity_model->get_posts($slug);
-
-		if (empty($data['activity'])) {
+		if (empty($dt['activity'])) {
 			show_404();
-		}
-		$data['title'] = $data['activity']['title'];
+		} else {
+			$data = [
+				'title' => $dt['activity']['title'],
+				'activity' => $this->activity_model->get_posts($slug),
+				'categories' => $this->activity_model->get_categories(),
+			];
 
-		$this->load->view('templates/header');
-		$this->load->view('activities/view', $data);
-		$this->load->view('templates/footer');
+			$this->load->view('templates/header');
+			$this->load->view('activities/view', $data);
+			$this->load->view('templates/footer');
+		}
 	}
 
 	public function create()

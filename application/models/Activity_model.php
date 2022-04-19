@@ -2,23 +2,40 @@
 class Activity_model extends  CI_Model
 {
 
-	public function get_posts($slug = false, $limit = FALSE, $offset = FALSE)
+	public function get_posts($slug = false, $limit = FALSE, $offset = FALSE, $categoryID=null)
 	{
-
-		if ($limit) {
-			$this->db->limit($limit, $offset);
-		}
 		$this->db->join('tgr_categories', 'tgr_categories.id_category = tgr_activities.id_category');
 
+		if( $this->input->post('requestKey') !== null){
 
-		if ($slug === false) {
-			$this->db->order_by('tgr_activities.id_activity', 'DESC');
+			$keyWorlds = htmlentities($this->input->post('requestKey'));
+
+			$this->db->like('title', $keyWorlds);
+			$this->db->or_like('body', $keyWorlds);
 
 			$query = $this->db->get('tgr_activities');
 			return $query->result();
+
+		}else{
+			if (!empty($limit)) {
+				$this->db->limit($limit, $offset);
+			}
+	
+			if ($slug === false) {
+				$this->db->order_by('tgr_activities.id_activity', 'DESC');
+	
+				if (!empty($categoryID)) {
+					$this->db->where('tgr_activities.id_category', $categoryID);
+				}
+	
+				$query = $this->db->get('tgr_activities');
+				return $query->result();
+			}
+	
+			$query = $this->db->get_where('tgr_activities', array('slug' => $slug));
+			return $query->row_array();
 		}
-		$query = $this->db->get_where('tgr_activities', array('slug' => $slug));
-		return $query->row_array();
+		
 	}
 
 	//Function qui sélectionne les catégories
@@ -29,27 +46,6 @@ class Activity_model extends  CI_Model
 		return $query->result();
 	}
 
-
-	//Function qui enleve les accents et qui traduit les caractères spéciaux
-	public function str_to_noaccent($str)
-	{
-		$url = $str;
-		$url = preg_replace('#Ç#', 'C', $url);
-		$url = preg_replace('#ç#', 'c', $url);
-		$url = preg_replace('#è|é|ê|ë#', 'e', $url);
-		$url = preg_replace('#È|É|Ê|Ë#', 'E', $url);
-		$url = preg_replace('#à|á|â|ã|ä|å#', 'a', $url);
-		$url = preg_replace('#@|À|Á|Â|Ã|Ä|Å#', 'A', $url);
-		$url = preg_replace('#ì|í|î|ï#', 'i', $url);
-		$url = preg_replace('#Ì|Í|Î|Ï#', 'I', $url);
-		$url = preg_replace('#ð|ò|ó|ô|õ|ö#', 'o', $url);
-		$url = preg_replace('#Ò|Ó|Ô|Õ|Ö#', 'O', $url);
-		$url = preg_replace('#ù|ú|û|ü#', 'u', $url);
-		$url = preg_replace('#Ù|Ú|Û|Ü#', 'U', $url);
-		$url = preg_replace('#ý|ÿ#', 'y', $url);
-		$url = preg_replace('#Ý#', 'Y', $url);
-		return ($url);
-	}
 
 	public function create_activity($postData)
 	{
