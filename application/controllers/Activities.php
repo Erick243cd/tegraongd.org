@@ -26,7 +26,7 @@ class Activities extends CI_Controller
 			'categories' => $this->activity_model->get_categories(),
 			'latest' => $this->activity_model->get_posts($slug, 3, $offset),
 		];
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', ['title'=>'Actualites']);
 		$this->load->view('activities/index', $data);
 		$this->load->view('templates/footer');
 	}

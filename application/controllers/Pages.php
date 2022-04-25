@@ -14,16 +14,17 @@ class Pages extends CI_Controller
 			if (!empty($sess_data)) {
 
 				return $this->dashboard();
-
 			} else {
 				$this->load->view('pages/login');
 			}
-
 		} else {
-			$data['title'] = ucfirst($page);
-			$data['posts'] = $this->activity_model->get_posts($slug = false, $offest = 0, $limit = 6);
+			$data = [
+				'title' => ucfirst($page),
+				'posts'	=> $this->activity_model->get_posts($slug = false, $offest = 0, $limit = 6),
+				'videos'	=> $this->videoModel->getHomeVideos($offest = 0, $limit = 3)
+			];
 
-			$this->load->view('templates/header');
+			$this->load->view('templates/header', ['title' => ucfirst($page)]);
 			$this->load->view('pages/' . $page, $data);
 			$this->load->view('templates/footer');
 		}
@@ -39,11 +40,9 @@ class Pages extends CI_Controller
 			$this->load->view('dashboard/layouts/header', $data);
 			$this->load->view('dashboard/main');
 			$this->load->view('dashboard/layouts/footer');
-
 		} else {
 			redirect(base_url('login'));
 		}
-
 	}
 
 	function logout()

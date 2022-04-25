@@ -30,7 +30,8 @@ class VideoModel extends CI_Model
 		return $this->db->update($this->table, $data);
 	}
 
-	public function deleteVideo($id){
+	public function deleteVideo($id)
+	{
 
 		$image_file_name = $this->db->select('cover_image')->get_where($this->table, ['video_id' => $id])->row()->cover_image;
 		$cwd = getcwd(); //Save the current working directory
@@ -41,5 +42,13 @@ class VideoModel extends CI_Model
 
 		$this->db->where('video_id', $id);
 		return $this->db->delete($this->table);
+	}
+
+	// Home videos
+	public function getHomeVideos($offset, $limit)
+	{
+		$this->db->order_by('video_id', 'DESC');
+		$this->db->limit($limit, $offset);
+		return $this->db->get($this->table)->result();
 	}
 }

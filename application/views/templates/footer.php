@@ -64,8 +64,7 @@
                     <div class="row">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p>Copyright ©2021 Tous droits reservés | Tegra ONGD  by <a
-                                            href="#" class="text-white">Tegra ONGD</a></p>
+                                <p>Copyright ©<?= date('Y')?> Tegra Ongd, Tous droits reservés</p>
                             </div>
                         </div>
                     </div>
@@ -75,8 +74,8 @@
     </div>
 </footer>
 
-<div id="back-top">
-    <a title="Revenir en de la page" href="#" class="genric-btn primary"> <i class="fas fa-level-up-alt"></i></a>
+<div id="back-top" class="back-top">
+    <a title="Revenir en de la page" href="#" class="back-top-a"><i class="fas fa-level-up-alt"></i></a>
 </div>
 
 
@@ -118,5 +117,22 @@
 
     gtag('config', 'UA-23581568-13');
 </script>
+
+<script>
+	// PWA And Services Worker
+ if ('serviceWorker' in navigator) {
+   window.addEventListener('load', () => {
+     navigator.serviceWorker.register('service-worker.js')
+       .then(registration => {
+         console.log('<img draggable="false" role="img" class="emoji" alt="😎" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f60e.svg"> Le Service Worker est enregistré', registration);
+       })
+       .catch(error => {
+         console.error('<img draggable="false" role="img" class="emoji" alt="😥" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f625.svg"> L\'enregistrement ne s\'est pas bien passé :', error);
+       });
+   });
+ }
+</script>
+
+
 </body>
 </html>

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /pages/dashboard
+
+
+Sitemap: http://www.tegraongd.org/sitemap.xml

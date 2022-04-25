@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>https://www.tegraongd.org/</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.tegraongd.org/about/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   <url>
+
+      <loc>https://www.tegraongd.org/contact/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   <url>
+
+      <loc>https://www.tegraongd.org/education/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   <url>
+
+      <loc>https://www.tegraongd.org/sante/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   <url>
+
+      <loc>https://www.tegraongd.org/agropastoral/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   <url>
+
+      <loc>https://www.tegraongd.org/activities/index/</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://www.tegraongd.org/inscription/</loc>
+
+	  <lastmod>2022-04-27</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+
+</urlset>
