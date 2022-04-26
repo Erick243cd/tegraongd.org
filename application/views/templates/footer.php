@@ -118,16 +118,15 @@
     gtag('config', 'UA-23581568-13');
 </script>
 
-<script>
-	// PWA And Services Worker
+<script>	// PWA And Services Worker
  if ('serviceWorker' in navigator) {
    window.addEventListener('load', () => {
      navigator.serviceWorker.register('service-worker.js')
        .then(registration => {
-         console.log('<img draggable="false" role="img" class="emoji" alt="😎" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f60e.svg"> Le Service Worker est enregistré', registration);
+         console.log('Le Service Worker est enregistré', registration);
        })
        .catch(error => {
-         console.error('<img draggable="false" role="img" class="emoji" alt="😥" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f625.svg"> L\'enregistrement ne s\'est pas bien passé :', error);
+         console.error('L\'enregistrement ne s\'est pas bien passé :', error);
        });
    });
  }
