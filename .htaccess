@@ -40,7 +40,8 @@
 <IfModule mod_headers.c>
      AddType application/x-font-woff .woff
      AddType application/x-font-woff2 .woff2
-	<FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+	 AddType application/x-httpd-php5 .webmanifest
+	<FilesMatch "\\.(ico|jpe?g|png|gif|webmanifest|swf|gz|ttf)$">
 		Header set Cache-Control "max-age=2592000, public"
 	</FilesMatch>
 	<FilesMatch "\\.(css)$">
