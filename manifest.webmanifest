@@ -1,27 +1,229 @@
 {
-	"short_name": "WAM",
+	"short_name": "Tegra",
 	"name": "Tegra Ongd",
-	"theme_color": "#eb5252",
-	"background_color": "#000000",
-	"display": "fullscreen",
-	"Scope": "/",
+	"theme_color": "#1837FF",
+	"background_color": "#FFBA18",
+	"display": "standalone",
 	"orientation": "portrait",
+	"start_url": "<?php echo base_urk()?>",
 	"icons": [
-	  {
-		"src": "images/android/android-launchericon-48-48.png",
-		"type": "image/png",
-		"sizes": "48x48"
-	  },
-	  {
-		"src": "images/android/android-launchericon-96-96.png",
-		"type": "image/png",
-		"sizes": "96x96"
-	  },
-	  {
-		"src": "images/android/android-launchericon-192-192.png",
-		"type": "image/png",
-		"sizes": "192x192"
-	  }
+		{
+			"src": "assets/img/logo/192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "assets/img/logo/512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "assets/img/logo/logo_petit_pour_site.png",
+			"type": "image/png",
+			"sizes": "142x142"
+		},
+		{
+			"src": "assets/img/elements/disabled-check.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/elements/disabled-radio.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/elements/primary-check.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/elements/primary-radio.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/elements/success-check.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/elements/success-radio.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "assets/img/logo/logo.png",
+			"type": "image/png",
+			"sizes": "80x80"
+		},
+		{
+			"src": "assets/img/icon/faveicon.ico",
+			"type": "image/ico",
+			"sizes": "64x64"
+		},
+		{
+			"src": "assets/img/icon/faveicon.png",
+			"type": "image/png",
+			"sizes": "80x80"
+		},
+		{
+			"src": "assets/img/covers/10.jpg",
+			"type": "image/jpg",
+			"sizes": "3264x2448"
+		},
+		{
+			"src": "assets/img/covers/agro1.jpg",
+			"type": "image/jpg",
+			"sizes": "2272x1704"
+		},
+		{
+			"src": "assets/img/gallery/10.jpg",
+			"type": "image/jpg",
+			"sizes": "3264x2448"
+		},
+		{
+			"src": "assets/img/gallery/agro1.jpg",
+			"type": "image/jpg",
+			"sizes": "2272x1704"
+		},
+		{
+			"src": "assets/img/gallery/agro2.jpg",
+			"type": "image/jpg",
+			"sizes": "400x300"
+		},
+		{
+			"src": "assets/img/gallery/about.jpg",
+			"type": "image/jpg",
+			"sizes": "400x300"
+		},
+		{
+			"src": "assets/img/gallery/apropos.jpg",
+			"type": "image/jpg",
+			"sizes": "667x500"
+		},
+		{
+			"src": "assets/img/gallery/brevet.jpg",
+			"type": "image/jpg",
+			"sizes": "4272x2848"
+		},
+		{
+			"src": "assets/img/gallery/educatif1.jpg",
+			"type": "image/jpg",
+			"sizes": "750x500"
+		},
+		{
+			"src": "assets/img/gallery/educatif2.jpg",
+			"type": "image/jpg",
+			"sizes": "750x500"
+		},
+		{
+			"src": "assets/img/gallery/educatif3.jpg",
+			"type": "image/jpg",
+			"sizes": "750x500"
+		},
+
+		{
+			"src": "assets/img/gallery/joining3.jpg",
+			"type": "image/jpg",
+			"sizes": "664x350"
+		},
+		{
+			"src": "assets/img/gallery/joining4.jpg",
+			"type": "image/jpg",
+			"sizes": "525x350"
+		},
+		{
+			"src": "assets/img/gallery/sanitaire.jpg",
+			"type": "image/jpg",
+			"sizes": "430x440"
+		},
+		{
+			"src": "assets/img/gallery/sante1.jpg",
+			"type": "image/jpg",
+			"sizes": "750x500"
+		},
+		{
+			"src": "assets/img/gallery/section-bg1.jpg",
+			"type": "image/jpg",
+			"sizes": "1046x500"
+		},
+		{
+			"src": "assets/img/gallery/section-bg2.jpg",
+			"type": "image/jpg",
+			"sizes": "1050x494"
+		},
+		{
+			"src": "assets/img/hero/about.jpg",
+			"type": "image/jpg",
+			"sizes": "1050x498"
+		},
+		{
+			"src": "assets/img/hero/agropastoral.jpg",
+			"type": "image/jpg",
+			"sizes": "932x348"
+		},
+		{
+			"src": "assets/img/hero/contact.jpg",
+			"type": "image/jpg",
+			"sizes": "1048x388"
+		},
+		{
+			"src": "assets/img/hero/details.jpg",
+			"type": "image/jpg",
+			"sizes": "932x402"
+		},
+		{
+			"src": "assets/img/hero/education.jpg",
+			"type": "image/jpg",
+			"sizes": "1048x412"
+		},
+		{
+			"src": "assets/img/hero/h1_hero1.jpg",
+			"type": "image/jpg",
+			"sizes": "1046x401"
+		},
+		{
+			"src": "assets/img/hero/inscription.jpg",
+			"type": "image/jpg",
+			"sizes": "1050x432"
+		},
+		{
+			"src": "assets/img/hero/news.jpg",
+			"type": "image/jpg",
+			"sizes": "1050x494"
+		},
+		{
+			"src": "assets/img/hero/sanitaire.jpg",
+			"type": "image/jpg",
+			"sizes": "1050x372"
+		}
 	],
-	"start_url": "index.html?utm_source=homescreen"
-  }
+	"shortcuts": [
+		{
+			"name": "Tegra Home",
+			"short_name": "Découvrez tegra ongd",
+			"description": "Nous vous présentons les secteurs d'activités",
+			"url": "/",
+			"icons": [
+				{
+					"src": "assets/img/logo/192x192.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Tegra contact",
+			"short_name": "Pour tout contact",
+			"description": "Si vous désirez entrez en contact avec nous",
+			"url": "/contact",
+			"icons": [
+				{
+					"src": "assets/img/logo/192x192.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	],
+	"description": "Tegra ong website"
+}
