@@ -39,9 +39,6 @@ if (isset($session_data)) {
 			text-decoration: line-through;
 			color: #D2691E!important;
 		}
-		.back-top-a{
-			
-		}
 	</style>
 </head>
 
@@ -104,7 +101,7 @@ if (isset($session_data)) {
 													<li><a href="<?= base_url() ?>agropastoral" class="<?= ($title === 'Agropastoral' ? 'actives' : '') ?>">Agropastoral</a></li>
 												</ul>
 											</li>
-											<li><a href="<?= base_url() ?>activities/index" class="<?= ($title === 'Actualites' ? 'actives' : '') ?>">Actualités</a></li>
+											<li><a href="<?= base_url() ?>activities/index" class="<?= ($title === 'Actualites' || $title==='Details' ? 'actives' : '') ?>">Actualités</a></li>
 											<li><a href="<?= base_url() ?>contact" class="<?= ($title === 'Contact' ? 'actives' : '') ?>">Contact</a></li>
 											<li>
 												<div class="header-right-btn f-right  ml-15">
