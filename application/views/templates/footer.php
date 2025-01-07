@@ -57,7 +57,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="footer-border">
@@ -131,7 +130,5 @@
    });
  }
 </script>
-
-
 </body>
 </html>

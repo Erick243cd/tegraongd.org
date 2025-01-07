@@ -5,7 +5,7 @@
 	"background_color": "#FFBA18",
 	"display": "standalone",
 	"orientation": "portrait",
-	"start_url": "<?php echo base_urk()?>",
+	"start_url": "<?php echo base_url()?>",
 	"icons": [
 		{
 			"src": "assets/img/logo/192x192.png",

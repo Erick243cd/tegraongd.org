@@ -203,8 +203,8 @@ class Contact extends CI_Controller
             $mail->Host = 'mail.tegraongd.org';
             $mail->SMTPAuth = TRUE;
             $mail->SMTPSecure = 'smtp';
-            $mail->Username = 'contact@tegraongd.org';
-            $mail->Password = 'tegraongd2021';
+            $mail->Username = 'info@tegraongd.org';
+            $mail->Password = 'TEGRA-ONGD@2023';
             $mail->Port = 587;
 
             $mail->SMTPOptions = array(
